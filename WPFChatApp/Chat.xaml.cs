@@ -38,30 +38,57 @@ namespace WPFChatApp
                 rightMessageTextBox.Text = "Type Something";
         }
 
-        bool isCheck = false;
-        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            if (isCheck == false)
-            {
+        
+        
 
-                var message = new Chat();
-                message.HorizontalAlignment = HorizontalAlignment.Right;
-                message.Content = rightMessageTextBox.Text.ToString();
-                message.Height = 30;
-                ChatGrid.Children.Add(message);
-                rightMessageTextBox.Text = String.Empty;
-                isCheck = true;
-            }
-            else
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Label sendMessage = new Label()
             {
-                var message = new Chat();
-                message.HorizontalAlignment = HorizontalAlignment.Left;
-                message.Content = rightMessageTextBox.Text.ToString();
-                message.Height = 30;
-                ChatGrid.Children.Add(message);
-                rightMessageTextBox.Text = String.Empty;
-                isCheck = false;
-            }
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontSize = 10,
+                Content = rightMessageTextBox.Text,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center
+            };
+
+            Label answerMessage = new Label()
+            {
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontSize = 10,
+                Content = "Salam",
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center
+            };
+
+
+            var lenght1 = sendMessage.Content!.ToString()!.Length;
+            var answerLenght = answerMessage.Content!.ToString()!.Length;
+
+            Border border = new()
+            {
+                Margin = new Thickness(5, 5, 5, 5),
+                Background = new SolidColorBrush(Colors.WhiteSmoke),
+                Height = 40,
+                Width = sendMessage.FontSize * lenght1,
+                HorizontalAlignment = HorizontalAlignment.Right,
+                CornerRadius = new CornerRadius(25, 25, 0, 25),
+                Child = sendMessage
+            };
+
+            Border border2 = new()
+            {
+                Margin = new Thickness(5, 5, 5, 5),
+                Background = new SolidColorBrush(Colors.WhiteSmoke),
+                Height = 40,
+                Width = answerMessage.FontSize * answerLenght,
+                HorizontalAlignment = HorizontalAlignment.Left,
+                CornerRadius = new CornerRadius(25, 25, 25, 0),
+                Child = answerMessage
+            };
+
+            ChatGrid.Children.Add(border);
+            ChatGrid.Children.Add(border2);
 
         }
     }

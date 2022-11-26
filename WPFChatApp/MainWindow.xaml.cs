@@ -30,7 +30,7 @@ namespace WPFChatApp
             Chat uc1 = new Chat();
 
             uc1.Width = 640;
-            uc1.Message1Lbl.Content = "Salam aleykum";
+            
             
             MessageGrid.Children.Add(uc1);
         }
@@ -41,7 +41,7 @@ namespace WPFChatApp
             uc1.NameCentral.Content = "Kamran";
             uc1.Width = 640;
             uc1.ImageCentral.Source = new BitmapImage(new Uri(@"/Screenshot_2.png", UriKind.Relative));
-            uc1.Message1Lbl.Content = "Salam aleykum";
+            
 
             MessageGrid.Children.Add(uc1);
         }
@@ -52,7 +52,7 @@ namespace WPFChatApp
             uc1.ImageCentral.Source = new BitmapImage(new Uri(@"/Screenshot_3.png", UriKind.Relative));
             uc1.NameCentral.Content = "Huseyn";
             uc1.Width = 640;
-            uc1.Message1Lbl.Content = "Salam aleykum";
+            
 
             MessageGrid.Children.Add(uc1);
         }
@@ -63,7 +63,7 @@ namespace WPFChatApp
             uc1.ImageCentral.Source = new BitmapImage(new Uri(@"/Screenshot_4.png", UriKind.Relative));
             uc1.NameCentral.Content = "Fatih";
             uc1.Width = 640;
-            uc1.Message1Lbl.Content = "Salam aleykum";
+            
 
             MessageGrid.Children.Add(uc1);
         }
@@ -74,7 +74,7 @@ namespace WPFChatApp
             uc1.ImageCentral.Source = new BitmapImage(new Uri(@"/Screenshot_5.png", UriKind.Relative));
             uc1.NameCentral.Content = "Omer";
             uc1.Width = 640;
-            uc1.Message1Lbl.Content = "Salam aleykum";
+            
 
             MessageGrid.Children.Add(uc1);
         }
@@ -85,7 +85,7 @@ namespace WPFChatApp
             uc1.ImageCentral.Source = new BitmapImage(new Uri(@"/Screenshot_6.png", UriKind.Relative));
             uc1.NameCentral.Content = "Sari";
             uc1.Width = 640;
-            uc1.Message1Lbl.Content = "Salam aleykum";
+            
 
             MessageGrid.Children.Add(uc1);
         }
